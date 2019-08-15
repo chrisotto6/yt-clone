@@ -16,7 +16,8 @@ handleSubmit = async (searchTerm) => {
       params: {
         part: 'snippet',
         maxResults: 5,
-        key: `${APIKEY}`,
+        // eslint-disable-next-line no-template-curly-in-string
+        key: `'${APIKEY}'`,
         q: searchTerm,
       }
     });
