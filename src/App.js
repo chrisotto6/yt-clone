@@ -15,7 +15,7 @@ handleSubmit = async (searchTerm) => {
       params: {
         part: 'snippet',
         maxResults: 5,
-        key: ,
+        key: process.env.APIKEY,
         q: searchTerm,
       }
     });
