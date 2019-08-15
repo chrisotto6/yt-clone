@@ -11,11 +11,12 @@ class App extends React.Component {
   }
 
 handleSubmit = async (searchTerm) => {
+    const APIKEY = process.env.APIKEY;
     const response = await youtube.get('search', {
       params: {
         part: 'snippet',
         maxResults: 5,
-        key: process.env.APIKEY,
+        key: `${APIKEY}`,
         q: searchTerm,
       }
     });
