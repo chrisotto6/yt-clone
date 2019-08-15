@@ -1,9 +1,9 @@
 import React from 'react';
-import { Paper, TextField, Typography } from '@material-ui/core';
+import { Paper, Typography } from '@material-ui/core';
 
 const VideoDetail = ({ video }) => {
     if(!video) {
-        return <div>Loading...</div>
+        return <div>.</div>
     }
     const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
 
